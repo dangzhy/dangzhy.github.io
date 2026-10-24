@@ -1,0 +1,188 @@
+configuration:
+  pageTitle: zhengyang dang
+  pageTitleSuffix: " · zhengyang dang"
+  enableSPA: true
+  enablePopovers: false
+  analytics: null
+  locale: zh-CN
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
+  defaultDateType: modified
+  theme:
+    fontOrigin: local
+    cdnCaching: false
+    typography:
+      header: Schibsted Grotesk
+      body: Source Sans Pro
+      code: IBM Plex Mono
+    colors:
+      lightMode:
+        light: "#fcf9fc"
+        lightgray: "#e9e0ed"
+        gray: "#877b91"
+        darkgray: "#575065"
+        dark: "#393146"
+        secondary: "#8b64a0"
+        tertiary: "#bc729b"
+        highlight: rgba(195,158,215,.13)
+        textHighlight: "#f5d7eb"
+      darkMode:
+        light: "#211d2b"
+        lightgray: "#403548"
+        gray: "#a99ab6"
+        darkgray: "#d3c8df"
+        dark: "#f0e7f6"
+        secondary: "#cdb1e3"
+        tertiary: "#e6a6c6"
+        highlight: rgba(205,177,227,.12)
+        textHighlight: "#644662"
+  baseUrl: dangzhy.github.io
+plugins:
+  - source: "@quartz-community/note-properties"
+    enabled: true
+    order: 5
+    options:
+      hidePropertiesView: true
+  - source: "@quartz-community/created-modified-date"
+    enabled: true
+    options:
+      priority:
+        - frontmatter
+        - filesystem
+    order: 10
+  - source: "@quartz-community/syntax-highlighting"
+    enabled: true
+    options:
+      theme:
+        light: github-light
+        dark: github-dark
+      keepBackground: false
+    order: 20
+  - source: "@quartz-community/obsidian-flavored-markdown"
+    enabled: true
+    options:
+      enableInHtmlEmbed: false
+      enableCheckbox: true
+    order: 30
+  - source: "@quartz-community/github-flavored-markdown"
+    enabled: true
+    order: 40
+  - source: "@quartz-community/crawl-links"
+    enabled: true
+    options:
+      markdownLinkResolution: shortest
+    order: 60
+  - source: "@quartz-community/description"
+    enabled: true
+    order: 70
+  - source: "@quartz-community/latex"
+    enabled: true
+    options:
+      renderEngine: katex
+    order: 80
+  - source: "@quartz-community/remove-draft"
+    enabled: true
+  - source: "@quartz-community/explicit-publish"
+    enabled: true
+  - source: "@quartz-community/content-index"
+    enabled: true
+    options:
+      enableSiteMap: true
+      enableRSS: true
+  - source: "@quartz-community/content-page"
+    enabled: true
+  - source: "@quartz-community/folder-page"
+    enabled: true
+  - source: "@quartz-community/tag-page"
+    enabled: true
+  - source: "@quartz-community/search"
+    enabled: true
+    layout:
+      position: left
+      priority: 20
+      group: toolbar
+      groupOptions:
+        grow: true
+  - source: "@quartz-community/darkmode"
+    enabled: true
+    layout:
+      position: left
+      priority: 30
+      group: toolbar
+  - source: "@quartz-community/page-title"
+    enabled: true
+    layout:
+      position: left
+      priority: 10
+  - source: "@quartz-community/reader-mode"
+    enabled: true
+    layout:
+      position: left
+      priority: 35
+      group: toolbar
+  - source: "@quartz-community/explorer"
+    enabled: true
+    layout:
+      position: left
+      priority: 50
+    options:
+      title: 笔记导航
+      folderDefaultState: open
+      useSavedState: true
+  - source: "@quartz-community/table-of-contents"
+    enabled: true
+    layout:
+      position: right
+      priority: 20
+      display: desktop-only
+    options:
+      minEntries: 1
+    order: 50
+  - source: "@quartz-community/backlinks"
+    enabled: true
+    layout:
+      position: right
+      priority: 30
+    options:
+      hideWhenEmpty: true
+  - source: "@quartz-community/breadcrumbs"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 5
+      condition: not-index
+    options:
+      rootName: 首页
+  - source: "@quartz-community/article-title"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 10
+  - source: "@quartz-community/tag-list"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 30
+      condition: has-tags
+  - source: "@quartz-community/footer"
+    enabled: true
+    layout:
+      position: footer
+      priority: 50
+    options:
+      links: {}
+layout:
+  groups:
+    toolbar:
+      position: left
+      priority: 20
+      direction: row
+      gap: 0.5rem
+  byPageType:
+    "404":
+      positions:
+        beforeBody: []
+        left: []
+        right: []

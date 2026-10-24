@@ -1,17 +1,16 @@
-# Quartz v5
+# zhengyang dang
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+个人学习主页，使用 Quartz 5.0.0 构建。目前包含首页、笔记与关于页，支持站内搜索、深浅色与手机布局。
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+```bash
+npm ci
+npm run build
+npm run check:site
+npm run dev
+```
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+本仓库的 content/ 由上层学习工作台的导出清单生成。请在源稿件中修改，再由工作台导出；勿把内部计划或完整笔记库复制到此处。
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+GitHub Pages 使用 .github/workflows/deploy.yml，在仓库 Pages 设置中选择 GitHub Actions。目标仓库、域名和发布范围由维护者另行配置。
 
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+基于 [Quartz](https://github.com/jackyzha0/quartz)，遵循上游 [MIT 许可证](LICENSE.txt)。

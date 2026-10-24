@@ -32,7 +32,9 @@ export default (() => {
       fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
 
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some((e) => e.name === "CustomOgImages")
-    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
+    const ogImageDefaultPath = cfg.baseUrl
+      ? `https://${cfg.baseUrl}/static/og-image.png`
+      : joinSegments(baseDir, "static/og-image.png")
 
     const coreStylesheet = css[0]?.content
     const coreScript = js.find(

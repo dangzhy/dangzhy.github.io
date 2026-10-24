@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "source": "content/index.md",
+      "target": "index.md",
+      "sha256": "d15046b6a39fc4ec692efda807ec34ca17fd12dc24526a65974e358d3b324289"
+    },
+    {
+      "source": "content/notes.md",
+      "target": "notes.md",
+      "sha256": "2a758cb9a88ef1a227c139b80967957ccb3b1af294cd4453e405a9e7d0fc57dd"
+    },
+    {
+      "source": "content/about.md",
+      "target": "about.md",
+      "sha256": "d2f08e129df7542b775d432b0c4339293e789e762a40cd20ed1d65b20f89b2bc"
+    }
+  ]
+}

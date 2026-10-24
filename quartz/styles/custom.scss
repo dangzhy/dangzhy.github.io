@@ -1,3 +1,234 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Keep Quartz's native layout and use locally available fonts for Chinese text.
+:root {
+  --bodyFont:
+    "Source Sans Pro", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+    sans-serif;
+  --headerFont:
+    "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+    sans-serif;
+  --codeFont: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+html {
+  width: 100%;
+}
+
+@media all and ($mobile) {
+  .page > #quartz-body .sidebar.left .page-title {
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+  .sidebar.left .search {
+    min-width: 0;
+    max-width: 2rem;
+  }
+  .sidebar.left .search-button {
+    width: 2rem;
+    padding: 0.35rem;
+    justify-content: center;
+  }
+  .sidebar.left .search-button > p {
+    display: none;
+  }
+  .page > #quartz-body .sidebar.right {
+    display: none;
+  }
+}
+
+.collection-empty {
+  color: var(--darkgray);
+  margin-top: 1.5rem;
+}
+.article-list ul {
+  padding-left: 1.4rem;
+  line-height: 1.8;
+}
+
+// Soft stationery colors, without changing Quartz's reading layout.
+body {
+  background-image:
+    radial-gradient(ellipse at 8% 8%, rgba(239, 205, 225, 0.24), transparent 37%),
+    radial-gradient(ellipse at 96% 90%, rgba(205, 205, 241, 0.23), transparent 40%);
+  background-attachment: fixed;
+}
+.page > #quartz-body {
+  column-gap: 14px;
+}
+.page > #quartz-body .sidebar {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.page-title {
+  letter-spacing: -0.8px;
+}
+.page-title a {
+  color: var(--secondary);
+}
+.page-title::after {
+  content: "✧  ｡･ﾟ notes & little discoveries ﾟ･｡";
+  display: block;
+  margin-top: 0.65rem;
+  font-size: 0.63rem;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: var(--gray);
+}
+.page > #quartz-body .center {
+  background: color-mix(in srgb, var(--light), white 48%);
+  border: 1px solid var(--lightgray);
+  border-radius: 18px;
+  padding: 0 2rem 1.5rem;
+  margin-top: 4.5rem;
+  box-shadow: 0 8px 32px #946cab08;
+}
+.page > #quartz-body .center .page-header {
+  margin-top: 1.8rem;
+}
+.article-title {
+  font-size: 1.85rem;
+  letter-spacing: -0.6px;
+  line-height: 1.5;
+}
+.article-title::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  border-radius: 4px;
+  margin-top: 0.75rem;
+  background: linear-gradient(90deg, #d899bc, #b5a4e5);
+}
+article h2 {
+  font-size: 1.35rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid #d9b2d0;
+}
+article p,
+article li {
+  line-height: 1.85;
+}
+article a.internal {
+  border-bottom: 1px solid color-mix(in srgb, var(--secondary), transparent 70%);
+  border-radius: 3px;
+}
+.search > .search-button {
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--light), white 40%);
+  border-color: var(--lightgray);
+}
+.toc h3,
+.backlinks h3,
+.study-tags h3 {
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+.explorer h2 {
+  color: var(--secondary);
+}
+.explorer-content ul li > a {
+  font-weight: 500;
+}
+.explorer-content ul li > a.active {
+  border-radius: 5px;
+  background: var(--highlight);
+  padding: 0.15rem 0.3rem;
+}
+.study-tags h3 {
+  margin: 0.25rem 0 0.65rem;
+}
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+.tag-link,
+ul.tags > li {
+  font-size: 0.78rem;
+  font-weight: 400;
+  border: 1px solid var(--lightgray);
+  background: var(--highlight);
+  border-radius: 999px;
+  padding: 0.18rem 0.6rem;
+  line-height: 1.6;
+}
+.tag-link:hover {
+  border-color: var(--tertiary);
+  color: var(--tertiary);
+}
+.all-tags {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--gray);
+}
+.list-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-left: 0.6rem;
+}
+.page > #quartz-body footer {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+:root[saved-theme="dark"] .page > #quartz-body .center {
+  background: #282232;
+  box-shadow: none;
+}
+:root[saved-theme="dark"] .search > .search-button {
+  background: #282232;
+}
+@media all and ($mobile) {
+  .page > #quartz-body {
+    padding: 0 1rem;
+  }
+  .page > #quartz-body .sidebar.left {
+    padding-left: 0;
+    padding-right: 0;
+    flex-wrap: wrap;
+  }
+  .page > #quartz-body .sidebar.left .page-title::after {
+    display: none;
+  }
+  .page > #quartz-body .sidebar.left .study-tags {
+    flex-basis: 100%;
+    padding: 0.7rem 0 0.15rem;
+  }
+  .study-tags h3,
+  .study-tags .tag-cloud {
+    display: none;
+  }
+  .page > #quartz-body .center {
+    margin-top: 1.4rem;
+    border-radius: 12px;
+    padding: 0 1rem 1rem;
+  }
+  .page > #quartz-body .center .page-header {
+    margin-top: 1rem;
+  }
+  .article-title {
+    font-size: 1.55rem;
+  }
+  article h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+
+.page > #quartz-body .center {
+  box-sizing: border-box;
+  min-width: 0;
+}
+ul.tags > li {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}

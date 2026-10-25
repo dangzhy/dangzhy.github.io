@@ -29,9 +29,10 @@ def check(root):
         errors.append("缺少首页 index.html")
     else:
         home = (root / "index.html").read_text(encoding="utf-8")
-        for required in ('class="article-title"', 'class="left sidebar"', 'zhengyang dang', '关于我', '内容索引'):
+        # Page prose is edited in Obsidian; validate layout without fixing its wording.
+        for required in ('class="article-title"', 'class="left sidebar"'):
             if required not in home:
-                errors.append(f"首页缺少必要内容：{required}")
+                errors.append(f"首页缺少必要结构：{required}")
     for slug in ("notes", "about"):
         if not (root / f"{slug}.html").is_file():
             errors.append(f"缺少栏目：{slug}")

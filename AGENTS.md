@@ -8,7 +8,8 @@
 - 当前内容栏目仅保留“笔记”，另有首页与关于页；研究、阅读、实践暂不导出，不自行恢复独立栏目。
 - quartz.config.yaml 维护原生导航、搜索、阅读模式、目录和反向链接的位置。quartz.ts 为原生布局追加文章列表和标签入口，替换默认 PageTypeDispatcher；升级后检查此扩展入口。
 - quartz/components/StudyDesk.tsx 维护文章列表及标签导航，quartz/styles/custom.scss 维护本地字体、淡樱粉浅紫主题和手机适配。主页正文在 ../content/index.md；标签规则见 ../tags.md。
-- content/ 为生成目录，不直接编辑。源材料位于 ../content/，通过 ../export-manifest.json 白名单导出。原始学习笔记将另行选择并引用。
+- content/ 为生成目录，不直接编辑。../content/ 是指向 Obsidian research 库“网站页面”的本地链接；首页、关于、笔记入口在 Obsidian 中维护，通过 ../export-manifest.json 白名单导出。学习笔记/轨迹规划/MINCO 的原始材料另行选材，不自动导出。
+- 用户先在 Obsidian 编辑，明确要求推送后再发布。仅整理源文件位置时，不自动上传或部署。
 - 在工作台执行 python3 publishing/scripts/site.py build 可依次导出、构建和检查；preview 命令还会启动预览。
 - 本仓库仅包含网站与选中的公开稿件，勿将整个工作台复制入仓库。
 - origin 指向 dangzhy/dangzhy.github.io，发布分支 main；upstream 仅为 Quartz 官方源码。不要向 upstream 推送。发布范围以 ../policy.md 为准。

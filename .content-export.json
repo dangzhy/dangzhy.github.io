@@ -4,17 +4,17 @@
     {
       "source": "content/index.md",
       "target": "index.md",
-      "sha256": "d15046b6a39fc4ec692efda807ec34ca17fd12dc24526a65974e358d3b324289"
+      "sha256": "426c5c1f05d9e680eedbe107822e9b0d462ae8636eb1647c00f921e75ebcd00c"
     },
     {
       "source": "content/notes.md",
       "target": "notes.md",
-      "sha256": "2a758cb9a88ef1a227c139b80967957ccb3b1af294cd4453e405a9e7d0fc57dd"
+      "sha256": "2e22214ae9e3aaa9b302f5b0bc9584b0d96f9b67fb0ca0a30d1737cc03d13f93"
     },
     {
       "source": "content/about.md",
       "target": "about.md",
-      "sha256": "d2f08e129df7542b775d432b0c4339293e789e762a40cd20ed1d65b20f89b2bc"
+      "sha256": "e05807682dbe56257135c4473d92192044612dd4d5d353a63c5b18cfb86769d3"
     }
   ]
 }

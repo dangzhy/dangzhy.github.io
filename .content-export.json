@@ -4,7 +4,7 @@
     {
       "source": "content/index.md",
       "target": "index.md",
-      "sha256": "426c5c1f05d9e680eedbe107822e9b0d462ae8636eb1647c00f921e75ebcd00c"
+      "sha256": "060c111fdb336e39eea30afb23f4dc701acb40c15e7824167baef2d255426d1d"
     },
     {
       "source": "content/notes.md",
@@ -14,7 +14,7 @@
     {
       "source": "content/about.md",
       "target": "about.md",
-      "sha256": "e05807682dbe56257135c4473d92192044612dd4d5d353a63c5b18cfb86769d3"
+      "sha256": "cccbd1eba5aa24f9bd437b866def390e1b0b3cf32ab54d632ba08e8807d723a8"
     }
   ]
 }

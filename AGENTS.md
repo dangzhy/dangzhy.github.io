@@ -6,7 +6,6 @@
 - quartz.config.yaml 使用官方 npm 插件；由 npm ci 安装并复用锁定的插件包，不使用 Git 插件缓存进行构建。
 - 用户确认现有结构，要求风格更二次元：采用淡樱粉和浅紫配色、轻量手账细节，保持 Markdown 正文和侧栏结构。关系图谱已按要求移除，不自行恢复。
 - 当前内容栏目仅保留“笔记”，另有首页与关于页；研究、阅读、实践暂不导出，不自行恢复独立栏目。
-- 关于页正文按用户要求暂时留空，保留标题与入口；未收到新内容时不自行补写。
 - quartz.config.yaml 维护原生导航、搜索、阅读模式、目录和反向链接的位置。quartz.ts 为原生布局追加文章列表和标签入口，替换默认 PageTypeDispatcher；升级后检查此扩展入口。
 - quartz/components/StudyDesk.tsx 维护文章列表及标签导航，quartz/styles/custom.scss 维护本地字体、淡樱粉浅紫主题和手机适配。主页正文在 ../content/index.md；标签规则见 ../tags.md。
 - content/ 为生成目录，不直接编辑。../content/ 是指向 Obsidian research 库“网站页面”的本地链接；首页、关于、笔记入口在 Obsidian 中维护，通过 ../export-manifest.json 白名单导出。学习笔记/轨迹规划/MINCO 的原始材料另行选材，不自动导出。

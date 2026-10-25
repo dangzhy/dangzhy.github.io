@@ -5,4 +5,3 @@ eyebrow: ABOUT / THIS SPACE
 kind: page
 publish: true
 ---
-
